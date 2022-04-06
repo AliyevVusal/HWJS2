@@ -1,4 +1,3 @@
-
 //Task 1
 function mode(){
     let mode = confirm("Modu Sec CANCEL-QARA,OK-AG");
@@ -23,27 +22,25 @@ function mode(){
 
 
 
-
 //Task 2
 function age(){
     var ageStr = prompt("Yasinizi Daxil Edin!","Yas Heddi Minimum 18 dir");
     var hbtn= document.getElementById("ytbtn");
     var hbtn2= document.getElementById("ytbtn2");
+    var age = Number(ageStr);
     
-    var age = parseInt(ageStr);
-
-    if( age === ageStr){
+    if(isNaN(ageStr))
+    {
         alert("Eded Daxil Edin!");
     }
-    else{
-
-        if(age >= 18){
+    else
+    {
+        if(age <= 18){
             hbtn2.style.visibility = "visible";
-            alert();
+            alert("Boyu gelersen!");
         }else{
             hbtn.style.visibility = "visible";
-            alert();
-
+            alert("Xos Geldiniz");
         }
         
     }
